@@ -1,84 +1,109 @@
-# online-shop
+# E-com Shop
 
-Full-featured e-commerce application built using Python Django for the backend and Bootstrap for the frontend. It offers a robust and scalable platform for managing and showcasing products with features like user authentication, product search, and tagging. The application includes dynamic functionalities such as top products with star ratings, related products, and most-viewed products powered by IP-based middleware. Users can register, log in, browse products, and view their order history seamlessly. The project is designed with separated development and production settings, modular requirements files, and an example app with a custom user model, ensuring ease of deployment and extensibility.
+A full-featured e-commerce application built with **Python Django** for the backend and **Bootstrap** for the frontend. This application provides a scalable and efficient platform for managing and showcasing products, featuring user authentication, product search, and tagging. It includes dynamic features such as top-rated products, related product recommendations, and most-viewed products using IP-based middleware. Users can register, log in, browse products, and track their order history seamlessly. The project is structured with separate development and production settings, modular requirement files, and an example app with a custom user model for easy deployment and customization.
 
-![Default Home View](_screenshots/?raw=true "Title")
+### Features
 
-### Main features
+- Modular project structure with separate development and production settings
+- Custom user model with authentication (registration & login)
+- Integrated Bootstrap for responsive UI
+- Product rating and reviews
+- Related product recommendations
+- Most viewed products tracking using IP Middleware
+- Product search functionality
+- Product tagging for easy filtering
+- User order history tracking
 
-* Separated dev and production settings
+---
 
-* Example app with custom user model
+## Getting Started
 
-* Bootstrap static files included
+### **1. Clone the Project**
 
-* User registration and logging in
+```bash
+git clone https://github.com/Anirudhmaurya1208/WebScanner.git
+cd WebScanner
+```
 
-* Separated requirements files
+### **2. Set Up a Virtual Environment**
 
-* Top Products with star rating
+#### **Windows**
+```bash
+python -m venv env
+env\Scripts\activate
+```
 
-* Related Products 
+#### **Mac/Linux**
+```bash
+python3 -m venv env
+source env/bin/activate
+```
 
-* Most viewed Products with IP Middleware
+### **3. Install Dependencies**
 
-* searching on products
+```bash
+pip install -r requirements.txt
+```
 
-* product tag with taagit
+### **4. Configure the Database**
 
-* User order history 
+Modify `settings.py` to add your database credentials:
 
-
-# Getting Started
-To use this template to start your own project:
-
-clone the project
-
-    git clone https://github.com/amirhossein-bayati/online-shop.git
-    
-create and start a a virtual environment
-
-    virtualenv env --no-site-packages
-
-    source env/bin/activate
-
-Install the project dependencies:
-
-    pip install -r requirements.txt
-
-create a postgres db and add the credentials to settings.py
-
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.postgresql',
-            'NAME': 'db_name',
-            'USER': 'name',
-            'PASSWORD': '',
-            'HOST': 'localhost',
-            'PORT': '',
-        }
+```python
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'db_name',
+        'USER': 'db_user',
+        'PASSWORD': 'db_password',
+        'HOST': 'localhost',
+        'PORT': '',
     }
-    
-then run
+}
+```
 
-    python manage.py migrate
+### **5. Apply Migrations**
 
-create admin account
+```bash
+python manage.py makemigrations
+python manage.py migrate
+```
 
-    python manage.py createsuperuser
-      
-then
+### **6. Create a Superuser**
 
-    python manage.py makemigrations
+```bash
+python manage.py createsuperuser
+```
 
-to makemigrations for the app
+### **7. Run the Development Server**
 
-then again run
+```bash
+python manage.py runserver
+```
 
-    python manage.py migrate
+### **8. Access the Application**
 
-to start the development server
+Open your browser and navigate to:
 
-    python manage.py runserver
+```
+http://localhost:8000
+```
 
-and open localhost:8000 on your browser to view the app.
+Now your e-commerce application is up and running! 🎉
+
+---
+
+## Contributing
+If you would like to contribute to this project, feel free to fork the repository, make your changes, and submit a pull request.
+
+---
+
+## License
+This project is licensed under the MIT License.
+
+---
+
+### **Need Help?**
+If you encounter any issues, feel free to open an issue in the repository or reach out for support.
+
+Happy coding! 🚀
